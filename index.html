@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Koperasi Nusantara</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header style="background-color: #1dd1a1">
+            <div class="container">
+                <nav class="navbar">
+					<link rel="stylesheet" href="css/index.css">
+					<img src="gambar/logo.png" class="logo">
+                    <a class="navbar1" href="index.html">Home</a>
+                    <a href="our_profile.html">Our Profile</a>
+					<a href=#>Portofolio</a>
+                    <a href=#>Message Us</a>
+                </nav>
+            </div>
+        </header>
+		<hr>
+		
+		<main>
+			<h1 class="welcome"><span id="visitor"></span></h1>
+			<script>
+				var name = prompt("Who are you?");
+					document.getElementById("visitor").innerText = "Hi " + name + ", Welcome to Koperasi Nusantara Website";
+            </script>
+			
+		<img class="gambar1" src="gambar/gambar1.png" alt="banner">
+		<hr>
+		<h1 class="ourhq">Our Headquarter</h1>
+		
+		<div class="row">
+			<div class="column">
+				<img src="gambar/jakarta.jpg" alt="Jakarta" style="width:100%">
+				<div class="caption">Jakarta</div>
+			</div>
+			<div class="column">
+				<img src="gambar/surabaya.jpg" alt="Surabaya" style="width:100%">
+				<div class="caption">Surabaya</div>
+			</div>
+			<div class="column">
+				<img src="gambar/medan.jpg" alt="Medan" style="width:100%">
+				<div class="caption">Medan</div>
+			</div>
+		</div>
+		<hr>
+		<h1 class="message_us">Message Us</h1>
+			<section id="message">
+                <div class="container">
+
+                    <div class="form">
+                        <form class="form-input" name="form-input" onsubmit="return validateForm()">
+                            <form action="">
+							
+                                <div class="input-group">
+                                    <label class="label">Name</label> : &ThinSpace;
+                                    <div class="textbox">
+                                        <input type="text" name="name" placeholder="Name">
+                                    </div>
+                                </div>
+								
+                                <div class="input-group">
+                                    <label class="label">Email</label> : &ThinSpace;
+                                    <div class="textbox">
+                                        <input type="text" name="email" placeholder="Email">
+                                    </div>
+                                </div>
+								
+                                <div class="input-group">
+                                    <label class="label">Phone Number</label> : &ThinSpace;
+                                    <div class="textbox">
+                                        <input type="text" name="phonenumber" placeholder="Phone Number">
+                                    </div>
+                                </div>
+								
+                                <div class="input-group">
+                                    <label class="label">Message</label>  : &ThinSpace;
+                                    <div class="textbox">
+                                        <textarea name="messages" id="" cols="30" rows="3" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <input type="submit" value="Submit">
+                            </form>
+
+                            <script>
+                                function validateForm() {
+                                    var name = document.forms["form-input"]["name"].value;
+                                    var email = document.forms["form-input"]["email"].value;
+                                    var phone_number = document.forms["form-input"]["phonenumber"].value;
+                                    var messages = document.forms["form-input"]["messages"].value;
+
+                                    document.getElementById("name-output").innerText = "Name: " + name;
+                                    document.getElementById("email-output").innerText = "Email: " + email;
+                                    document.getElementById("phone_number-output").innerText = "Phone Number: " + phone_number;
+                                    document.getElementById("messages-output").innerText = "Messages: " + messages;
+                                    return false;
+                                }
+                            </script>
+                        </form>
+
+                        <div class="form-output">
+                            <div class="container">
+                                <div class="form-content">
+                                        <p class="content-para"><span id="name-output"></span></p>
+                                        <p class="content-para"><span id="email-output"></span></p>
+                                        <p class="content-para"><span id="phone_number-output"></span></p>
+                                        <p class="content-para"><span id="messages-output"></span></p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		<hr>
+		
+		<footer style="background-color: #1dd1a1;">
+		<p class="credit">Created by Faisal</p>
+		</footer>
+		
+		</main>
+</html>
